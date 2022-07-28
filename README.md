@@ -101,7 +101,7 @@ Deleted Successfully !!!
 
 Rolling Deployment : It is an deployment strategy that slowly replaces previous versions of an application with new versions of an application by completely replacing the infrastructure on which the application is running
 
-By using ec2.tf file, we have successfuly Created an EC2 instances with MediaWiki Application. We have created an AMI Image as well.
+By using ec2.tf file, we have successfuly Created an EC2 instances with MediaWiki Application. And we have created an AMI based on this server.
 
 Now We are going to create a LoadBalancer with LaunchConfiguration and Autoscaling Group based on the AMI we created 
 
