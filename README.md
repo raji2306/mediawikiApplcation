@@ -134,3 +134,8 @@ Mediawiki is successfully launched
 3. vpc.tf :
 
 Please use this Script if you want to create a VPC in separate VPC and CIDR
+
+
+That's it :
+
+We have successfully configured our MediaWiki application using Jenkins, Terraform and Ansible
