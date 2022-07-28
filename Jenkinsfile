@@ -16,7 +16,7 @@ pipeline {
         }
         stage ('Terraform apply') {
             steps {
-                sh 'terraform apply --auto-approve'
+                sh 'terraform apply -target ec2.tf --auto-approve'
             }
         }
     }
