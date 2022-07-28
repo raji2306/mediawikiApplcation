@@ -22,7 +22,11 @@ Let's Begin!!!
 First, we look at our folder structure
 
 Jenkinsfile --> We are going to use this file in Jenkins Pipeline. Note : If you have multiple .tf files in repo. then, use target to specify the particular file.
+
+
 ansible.cfg --> This is just an Asnible Configuration File. Stable Version, If you want you can use it. 
+
+
 mediawiki.yaml --> This is our Ansible Script. If we run this Script, it will install the MediaWiki application. If you want to run the script manually, then clone this repo and run this ansible playbook
 
 ansible-playbook -i inventoryfile mediawiki.yaml
@@ -31,8 +35,14 @@ ansible-playbook -i inventoryfile mediawiki.yaml
 
 
 mysql.yaml --> We have stored the mysql password here. We can use Vault to encrypt if needed
+
+
 my.cnf.j2 --> Default config directory for Mysql. I just set the mysql username and password
+
+
 providers.tf --> This is the main file that needed to run the terraform script. It contains the Cloud providers details and our access, secret keys 
+
+
 linuxmachinekey.pem --> Pem Key that I am using to login into the managed nodes 
 
 Now we look at the 3 Terraform Scripts step by step
