@@ -135,6 +135,18 @@ Mediawiki is successfully launched
 
 Please use this Script if you want to create a VPC in separate VPC and CIDR
 
+For profession way, we don't use IP Address for accessing the server. So for fun, we will just attach an domain name to our instances and try to access it.
+
+For Time Being, I have done this for one instances that we have created using ec.tf. If we want, we can attach a domain name to our Load Balancer
+
+I have register an domain name from Freenom
+
+![image](https://user-images.githubusercontent.com/94977452/181648842-9b769a57-07a4-4cac-8958-de3dd4cca1e7.png)
+
+Now, By using AWS R53 I have mapped the ip address to domain name. Now we are able to access using Domain name.
+
+![image](https://user-images.githubusercontent.com/94977452/181649369-d82c4265-2530-4e95-a54c-3cf36c3b7a3d.png)
+
 
 That's it :
 
