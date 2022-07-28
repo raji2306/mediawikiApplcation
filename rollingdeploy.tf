@@ -2,7 +2,7 @@ resource "aws_launch_configuration" "mylaunchconfiguration" {
   name_prefix = "launchconfiguration"
   image_id = "ami-0f2451e7497de8a7b"
   instance_type = "t2.micro"
-  security_groups = [aws_security_group.mysecuritygroup.id]
+  security_groups = [aws_security_group.mysecuritygroup2.id]
 
   root_block_device {
     volume_type = "gp2"
@@ -16,8 +16,8 @@ resource "aws_launch_configuration" "mylaunchconfiguration" {
   }
 }
 
-resource "aws_security_group" "mysecuritygroup" {
-  name = "mysecuritygroup"
+resource "aws_security_group" "mysecuritygroup2" {
+  name = "mysecuritygroup2"
   ingress {
     description      = "TLS from VPC"
     from_port        = 22
@@ -97,7 +97,7 @@ data "aws_availability_zones" "zones" {
 resource "aws_elb" "myloadbalancer" {
   name               = "myloadbalancer"
   availability_zones = data.aws_availability_zones.zones.names
-  security_groups = [aws_security_group.mysecuritygroup.id]
+  security_groups = [aws_security_group.mysecuritygroup2.id]
 
   listener {
     lb_port           = 80
