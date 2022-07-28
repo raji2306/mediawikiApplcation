@@ -61,6 +61,11 @@ Also, Please Install Terraform plugin. I have already installed the TerraForm Pl
 
 ![image](https://user-images.githubusercontent.com/94977452/181643254-5d35a666-bd60-42d9-9b50-b705e42d2c00.png)
 
+Also, specify the Terraform Executables Path
+
+![image](https://user-images.githubusercontent.com/94977452/181647455-25318ede-7859-4107-8aad-f86bd8582cb5.png)
+
+
 Before Running the Script :
 
 ![image](https://user-images.githubusercontent.com/94977452/181643347-b2792828-50c4-4f11-8618-b96bdc112f13.png)
