@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage ('Github Checkout') {
             steps {
-                git credentialsId: 'raji2306', url: 'https://github.com/raji2306/workout-repo'
+                git credentialsId: 'rajida', url: 'https://github.com/raji2306/Thoughtworks-mediawikiApplcation'
             }
         }
         stage ('Terraform init') {
