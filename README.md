@@ -23,7 +23,6 @@ First, we look at our folder structure
 
 Jenkinsfile --> We are going to use this file in Jenkins Pipeline. Note : If you have multiple .tf files in repo. then, use target to specify the particular file.
 ansible.cfg --> This is just an Asnible Configuration File. Stable Version, If you want you can use it. 
-linuxmachinekey.pem --> Pem Key that I am using to login into the managed nodes 
 mediawiki.yaml --> This is our Ansible Script. If we run this Script, it will install the MediaWiki application. If you want to run the script manually, then clone this repo and run this ansible playbook
 
 ansible-playbook -i inventoryfile mediawiki.yaml
@@ -34,6 +33,7 @@ ansible-playbook -i inventoryfile mediawiki.yaml
 mysql.yaml --> We have stored the mysql password here. We can use Vault to encrypt if needed
 my.cnf.j2 --> Default config directory for Mysql. I just set the mysql username and password
 providers.tf --> This is the main file that needed to run the terraform script. It contains the Cloud providers details and our access, secret keys 
+linuxmachinekey.pem --> Pem Key that I am using to login into the managed nodes 
 
 Now we look at the 3 Terraform Scripts step by step
 
@@ -54,6 +54,32 @@ Also, Please Install Terraform plugin. I have already installed the TerraForm Pl
 Before Running the Script :
 
 ![image](https://user-images.githubusercontent.com/94977452/181643347-b2792828-50c4-4f11-8618-b96bdc112f13.png)
+
+Our Script ran successfully through Jenkins Pipeline :
+
+![image](https://user-images.githubusercontent.com/94977452/181646268-a263460b-09c4-4546-ac3c-ac40da9d2fbd.png)
+
+![image](https://user-images.githubusercontent.com/94977452/181646337-af90dea4-d6f8-4556-bd75-e046947c4116.png)
+
+Now,  try to access our application 
+
+![image](https://user-images.githubusercontent.com/94977452/181646405-722b013d-df4d-4c63-9155-75e46a9529ad.png)
+
+Also, we are able to connect to database using the user that we created through script
+
+![image](https://user-images.githubusercontent.com/94977452/181646586-c965f10c-333e-42c0-869e-19f789134815.png)
+
+Yes!!! We are able to connect to Database
+
+![image](https://user-images.githubusercontent.com/94977452/181646639-967567e3-12fa-45ef-8762-5b37c48b5acb.png)
+
+Now, login into the our control machine and see whether the scripts and state files are availabe and also delete it using "terraform destroy -auto-approve"
+
+![image](https://user-images.githubusercontent.com/94977452/181646879-9dad87f8-049a-44d6-9d3c-5bd98e30a961.png)
+
+Deleted Successfully !!!
+
+![image](https://user-images.githubusercontent.com/94977452/181646925-0a45671b-a123-452b-bf99-98311364129e.png)
 
 
 2. Rollingdeploy.tf
@@ -90,16 +116,6 @@ Mediawiki is successfully launched
 
 ![image](https://user-images.githubusercontent.com/94977452/181644267-68fc8b07-f2dd-4972-b225-4f94426e4a75.png)
 
+3. vpc.tf :
 
-
-
-
-
-
-
-
-
-
-
-
-
+Please use this Script if you want to create a VPC in separate VPC and CIDR
