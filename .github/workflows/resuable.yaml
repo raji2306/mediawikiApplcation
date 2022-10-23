@@ -5,10 +5,13 @@ on :
     inputs :
       image :
         required : true
+        type : string
       userid :
         required : true
+        type : number
       tag :
         required : true
+        type : number
     secrets :
       DOCKER_USERNAME :
         required : true
