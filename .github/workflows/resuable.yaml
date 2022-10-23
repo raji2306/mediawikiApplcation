@@ -6,9 +6,9 @@ on :
       image :
         required : true
         type : string
-      userid :
-        required : true
-        type : number
+#       userid :
+#         required : true
+#         type : number
       tag :
         required : true
         type : number
@@ -32,7 +32,7 @@ jobs :
       - name: docker-upload
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-         image: ${{ inputs.userid }}/${{ inputs.image }}:${{ inputs.tag }}
+         image: raji2306/${{ inputs.image }}:${{ inputs.tag }}
          registry: docker.io
          username: ${{ secrets.DOCKER_USERNAME }}
          password: ${{ secrets.DOCKER_PASSWORD }}
