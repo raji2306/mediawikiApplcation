@@ -9,9 +9,9 @@ on :
 #       userid :
 #         required : true
 #         type : number
-      tag :
-        required : true
-        type : number
+#       tag :
+#         required : true
+#         type : number
     secrets :
       DOCKER_USERNAME :
         required : true
@@ -32,7 +32,7 @@ jobs :
       - name: docker-upload
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-         image: raji2306/${{ inputs.image }}:${{ inputs.tag }}
+         image: raji2306/${{ inputs.image }}
          registry: docker.io
          username: ${{ secrets.DOCKER_USERNAME }}
          password: ${{ secrets.DOCKER_PASSWORD }}
