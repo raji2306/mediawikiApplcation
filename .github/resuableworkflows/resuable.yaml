@@ -10,9 +10,9 @@ on :
       tag :
         required : true
     secrets :
-      username :
+      DOCKER_USERNAME :
         required : true
-      password :
+      DOCKER_PASSWORD :
         required : true
         
 jobs :
