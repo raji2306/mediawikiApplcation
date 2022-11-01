@@ -35,7 +35,7 @@ jobs :
       - name : Creating a label
         id : conty
         run : |
-              if [[ ${{ GITHUB_EVENT_NAME }} == push ]]; then 
+              if [[ $GITHUB_EVENT_NAME == push ]]; then 
                 echo "::set-output name=taggy::vitty"
               else 
                 echo "::set-output name=taggy::vitto"
