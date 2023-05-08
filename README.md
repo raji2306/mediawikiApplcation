@@ -1,6 +1,6 @@
-# Thoughtworks-mediawikiApplcation
+#MediawikiApplcation
 
-GitHub Link : https://github.com/raji2306/Thoughtworks-mediawikiApplcation
+GitHub Link : https://github.com/raji2306/mediawikiApplcation
 
 Hi Guys, 
 
